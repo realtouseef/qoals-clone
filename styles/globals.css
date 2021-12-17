@@ -1,16 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .blobby-blob {
+    @apply absolute w-72 h-72 rounded-full mix-blend-multiply animate-blobby filter blur-xl opacity-70;
+  }
+
+  .normal-flex {
+    @apply flex justify-between items-center;
+  }
+  .btn-without-bg {
+    @apply px-6 py-2 bg-base-primary-hover hover:bg-base-primary-hover text-base-accent font-semibold rounded-md duration-200 ease-out cursor-pointer;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-base-accent hover:bg-base-accent-hover text-white font-semibold rounded-md duration-200 ease-out;
+  }
+}
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+:root {
+  /* for button background  */
+  --color-accent: #50d38d;
+  --color-accent-hover: #13af5b;
+  --color-primary-hover: #dcfce7;
+  /* for text */
+  --color-text-accent: #13af5b;
+  --color-text-secondary: #1c1340;
+  --color-text-muted: #746e8c;
+  /* for animating the shapes  */
+  --color-animation-purple: #6a14ba;
+  --color-animation-orange: #ff8a00;
+  --color-animation-blue: #00c1ff;
+  --color-animation-red: #eb5757;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+body {
+  font-family: "Montserrat";
 }
