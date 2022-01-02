@@ -6,7 +6,6 @@
   .blobby-blob {
     @apply absolute w-72 h-72 rounded-full mix-blend-multiply animate-blobby filter blur-xl opacity-70;
   }
-
   .normal-flex {
     @apply flex justify-between items-center;
   }
@@ -15,6 +14,12 @@
   }
   .btn-primary {
     @apply px-4 py-2 bg-base-accent hover:bg-base-accent-hover text-white font-semibold rounded-md duration-200 ease-out;
+  }
+  .large-blob {
+    @apply hidden lg:inline lg:w-52 lg:h-52;
+  }
+  .small-blob {
+    @apply hidden lg:inline lg:w-36 lg:h-36;
   }
 }
 @layer utilities {

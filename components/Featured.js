@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image"
 import { FeatureData } from "./FeatureData"
 
 const Featured = () => {
@@ -8,14 +8,17 @@ const Featured = () => {
         <article className="normal-flex flex-col lg:flex-row space-y-14 lg:space-y-0 lg:space-x-14">
           <div className="relative">
             <div className="absolute inset-0 -z-10">
-              <div className="blobby-blob -top-16 left-16 bg-base-animation-purple"></div>
-              <div className="blobby-blob top-32 right-64 bg-base-animation-blue animation-delay-2000"></div>
-              <div className="blobby-blob -bottom-8 left-48 bg-base-animation-red animation-delay-4000"></div>
+              <div className="small-blob blobby-blob top-32 left-0 bg-base-animation-purple"></div>
+              <div className="small-blob blobby-blob top-32 right-64 bg-base-animation-blue animation-delay-2000"></div>
+              <div className="small-blob blobby-blob bottom-24 left-48 bg-base-animation-red animation-delay-4000"></div>
             </div>
-            <img
+            <Image
               src={FeatureData[0].image}
               alt={FeatureData[0].heading}
-              className="shadow-2xl"
+              width={600}
+              height={600}
+              objectFit="contain"
+              loading="eager"
             />
           </div>
           <div className="max-w-lg">
@@ -38,28 +41,34 @@ const Featured = () => {
           </div>
           <div className="relative">
             <div className="absolute inset-0 -z-10">
-              <div className="w-60 h-60 blobby-blob -top-16 left-16 bg-base-animation-purple"></div>
-              <div className="w-60 h-60 blobby-blob top-32 right-64 bg-base-animation-orange animation-delay-2000"></div>
-              <div className="w-60 h-60 blobby-blob -bottom-8 left-48 bg-base-animation-red animation-delay-4000"></div>
+              <div className="small-blob blobby-blob top-32 left-0 bg-base-animation-purple"></div>
+              <div className="small-blob blobby-blob top-32 right-64 bg-base-animation-orange animation-delay-2000"></div>
+              <div className="small-blob blobby-blob bottom-24 left-48 bg-base-animation-red animation-delay-4000"></div>
             </div>
-            <img
+            <Image
               src={FeatureData[1].image}
               alt={FeatureData[1].heading}
-              className="shadow-2xl"
+              width={600}
+              height={600}
+              objectFit="contain"
+              loading="eager"
             />
           </div>
         </article>
         <article className="normal-flex flex-col lg:flex-row space-y-14 lg:space-y-0 lg:space-x-14">
           <div className="relative">
             <div className="absolute inset-0 -z-10">
-              <div className="w-60 h-60 blobby-blob -top-16 left-16 bg-base-animation-blue"></div>
-              <div className="w-60 h-60 blobby-blob top-32 right-64 bg-base-animation-purple animation-delay-2000"></div>
-              <div className="w-60 h-60 blobby-blob -bottom-8 left-48 bg-base-animation-orange animation-delay-4000"></div>
+              <div className="small-blob blobby-blob top-32 left-0 bg-base-animation-blue"></div>
+              <div className="small-blob blobby-blob top-32 right-64 bg-base-animation-purple animation-delay-2000"></div>
+              <div className="small-blob blobby-blob bottom-24 left-48 bg-base-animation-orange animation-delay-4000"></div>
             </div>
-            <img
+            <Image
               src={FeatureData[2].image}
               alt={FeatureData[2].heading}
-              className="shadow-2xl"
+              width={600}
+              height={600}
+              objectFit="contain"
+              loading="eager"
             />
           </div>
           <div className="max-w-lg">
